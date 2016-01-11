@@ -29,7 +29,7 @@ void setup()
     Serial.println("yes");
   }else{
     digitalWrite(11,HIGH);
-    return;
+    while(1);
   }
   
   bluetooth.print("AT+ROLE=S");
@@ -50,7 +50,7 @@ void setup()
   }
   else{
     digitalWrite(11,HIGH);
-    return;
+    while(1);
   }
   
   bluetooth.print("AT+NAMEHC-06");
@@ -71,7 +71,7 @@ void setup()
   }
   else{
     digitalWrite(11,HIGH);
-    return;
+    while(1);
   }
   
   bluetooth.print("AT+PIN1234");
@@ -91,7 +91,7 @@ void setup()
     Serial.println("yes");
   }else{
     digitalWrite(11,HIGH);
-    return;
+    while(1);
   }
 }
 void loop()

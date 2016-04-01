@@ -33,7 +33,7 @@ void setup()
     while(1);
   }
   
-  bluetooth.print("AT+ROLE=S");
+  bluetooth.print("AT+ROLE=M");
   delay(1000);
   cnt = 0;
   while(bluetooth.available()) {
@@ -43,7 +43,7 @@ void setup()
   }
   buff[cnt] = '\0';
   data = buff;
-  if(data == "OK+ROLE:S"){
+  if(data == "OK+ROLE:M"){
     digitalWrite(12,HIGH);
     delay(100);
     digitalWrite(12,LOW);
